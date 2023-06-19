@@ -3,40 +3,55 @@
     font-family: roboto
 }
 *{
-    
     font-family:roboto;
     box-sizing: border-box;
     
 }
+
+/*header*/
 #header{
-    top:0;
-    font-size: 2.5vh;
+    top:0; 
+}
+#header, .middle, #footer{
+    font-size: 30px;
+    font-weight: lighter; 
+}
+button{
+    letter-spacing: 1px;
+    font-weight: 100;
+    border: none;
+    background: none;
+}
+button:hover{
+    text-decoration: underline;
 }
 .top-left, .bottom-left{
     float: left;
+}
+.top-right, .bottom-right{
+    float: right;
+}
+#gridIcon{
+    width: 20px;
+    height:20px;
 }
 #profilePicture{
     border-radius: 50%;
     width: 30px;
     height: 30px;
 }
-#gridIcon{
-    width: 20px;
-    height:20px;
-}
-.top-right, .bottom-right{
-    float: right;
-}
+
+/*Center with search bar*/
 .middle{
     display: inline-block;
-    margin: 0 auto;
+    margin: auto;
     width: 100%;
     text-align: center;
 }
 .middle button{
-    color: #191919;
+    color: #5F6367;
     background-color: #F0F3F4;
-    padding: 2%;
+    padding: 1%;
     margin: 1%;
 }
 .middle button:hover{
@@ -45,15 +60,16 @@
 }
 #logo{
     word-spacing: normal;
-    font-size: 400%;
-    
-    
+    font-size: 300%;
     letter-spacing: 0;
     padding: 5%;
 }
 #searchBar{
+    height: 35px;
     width: 60%;
     margin: 2%;
+    border-radius: 1em;
+    
 }
 .blue{
     color: #4284F3;
@@ -67,22 +83,24 @@
 .green{
     color: #33A852;
 }
-button{
-    border: none;
-    background: none;
-}
-button:hover{
-    text-decoration: underline;
-}
+
+/*Footer*/
 
 #footer, #footer p{
-    font-size: 2.5vh;
-    background-color: gray;
-    left: 0;
-    bottom:0;
-    position: absolute;
-    width: 100%;
-    height:2.5vh;
     display: inline-block;
+    position: fixed;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    left: 0;
+    height: 50px; 
+    width: 100%;
+    font-size: 2.5vh;
+    background-color: lightgray;
     
+}
+
+.wrap{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    min-height: calc(100vh - 50px);
 }
