@@ -10,10 +10,13 @@
 
 /*header*/
 #header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     top:0; 
 }
-#header, .middle, #footer{
-    font-size: 30px;
+#header, #middle, #footer, button{
+    font-size: 1.5vw;
     font-weight: lighter; 
 }
 button{
@@ -25,12 +28,7 @@ button{
 button:hover{
     text-decoration: underline;
 }
-.top-left, .bottom-left{
-    float: left;
-}
-.top-right, .bottom-right{
-    float: right;
-}
+
 #gridIcon{
     width: 20px;
     height:20px;
@@ -42,25 +40,30 @@ button:hover{
 }
 
 /*Center with search bar*/
-.middle{
-    display: inline-block;
+#middle{
+    display: flex;
+    flex-direction: column;
     margin: auto;
     width: 100%;
-    text-align: center;
+    align-items: center;
+    /* text-align: center; */
+
 }
-.middle button{
+#middle button{
     color: #5F6367;
     background-color: #F0F3F4;
     padding: 1%;
     margin: 1%;
+    max-width: 200px;
 }
-.middle button:hover{
+#middle button:hover{
     border: solid gray;
+    border-width: 2px;
     border-radius: 0px;
 }
 #logo{
     word-spacing: normal;
-    font-size: 300%;
+    font-size: 500%;
     letter-spacing: 0;
     padding: 5%;
 }
@@ -70,6 +73,11 @@ button:hover{
     margin: 2%;
     border-radius: 1em;
     
+}
+/*Made the buttons under the search bar, its own flexbox row within the column format*/
+#searchBarButtons{
+    display: flex;
+    height:100%;
 }
 .blue{
     color: #4284F3;
@@ -87,15 +95,16 @@ button:hover{
 /*Footer*/
 
 #footer, #footer p{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: fixed;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+    margin:auto;
     left: 0;
     height: 50px; 
     width: 100%;
-    font-size: 2.5vh;
     background-color: lightgray;
+    align-items: center;
     
 }
 
