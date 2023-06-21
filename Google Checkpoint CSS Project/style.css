@@ -3,57 +3,81 @@
     font-family: roboto
 }
 *{
-    
     font-family:roboto;
     box-sizing: border-box;
     
 }
+
+/*header*/
 #header{
-    top:0;
-    font-size: 2.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top:0; 
 }
-.top-left, .bottom-left{
-    float: left;
+#header, #middle, #footer, button{
+    font-size: 1.5vw;
+    font-weight: lighter; 
+}
+button{
+    letter-spacing: 1px;
+    font-weight: 100;
+    border: none;
+    background: none;
+}
+button:hover{
+    text-decoration: underline;
+}
+
+#gridIcon{
+    width: 20px;
+    height:20px;
 }
 #profilePicture{
     border-radius: 50%;
     width: 30px;
     height: 30px;
 }
-#gridIcon{
-    width: 20px;
-    height:20px;
-}
-.top-right, .bottom-right{
-    float: right;
-}
-.middle{
-    display: inline-block;
-    margin: 0 auto;
+
+/*Center with search bar*/
+#middle{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
     width: 100%;
-    text-align: center;
+    align-items: center;
+    /* text-align: center; */
+
 }
-.middle button{
-    color: #191919;
+#middle button{
+    color: #5F6367;
     background-color: #F0F3F4;
-    padding: 2%;
+    padding: 1%;
     margin: 1%;
+    max-width: 200px;
 }
-.middle button:hover{
+#middle button:hover{
     border: solid gray;
+    border-width: 2px;
     border-radius: 0px;
 }
 #logo{
     word-spacing: normal;
-    font-size: 400%;
-    
-    
+    font-size: 500%;
     letter-spacing: 0;
     padding: 5%;
 }
 #searchBar{
+    height: 35px;
     width: 60%;
     margin: 2%;
+    border-radius: 1em;
+    
+}
+/*Made the buttons under the search bar, its own flexbox row within the column format*/
+#searchBarButtons{
+    display: flex;
+    height:100%;
 }
 .blue{
     color: #4284F3;
@@ -67,22 +91,25 @@
 .green{
     color: #33A852;
 }
-button{
-    border: none;
-    background: none;
-}
-button:hover{
-    text-decoration: underline;
-}
+
+/*Footer*/
 
 #footer, #footer p{
-    font-size: 2.5vh;
-    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    margin:auto;
     left: 0;
-    bottom:0;
-    position: absolute;
+    height: 50px; 
     width: 100%;
-    height:2.5vh;
-    display: inline-block;
+    background-color: lightgray;
+    align-items: center;
     
+}
+
+.wrap{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    min-height: calc(100vh - 50px);
 }
