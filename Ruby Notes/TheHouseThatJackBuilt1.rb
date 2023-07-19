@@ -1,3 +1,25 @@
+class Rhyme
+    attr_reader :phrases
+    def initialize(phrases)
+        @phrases = phrases
+    end
+
+    def createRhyme
+        nursery_rhyme = "" #final string containing all the lines
+        string = "" #keeps track of previous sentence(s) used to make new sentences
+        phrases.each do |phrase|
+            string = phrase + " " + string #creates new line
+            nursery_rhyme += "This is the " + string + "\n" #adds to the collection of other lines
+    # new_phrase = nursery_rhyme + phrase 
+    # nursery_rhyme += new_phrase
+    # puts nursery_rhyme
+    # puts "-------"
+    end
+    nursery_rhyme
+    end
+    
+end
+
 phrases = []
 phrases.push("house that Jack built.")
 phrases.push("malt that lay in")
@@ -12,14 +34,5 @@ phrases.push("rooster that crowed in the morn that woke")
 phrases.push("farmer sowing his corn that kept")
 phrases.push("horse and the hound and the horn that belonged to")
 
-nursery_rhyme = "" #final string containing all the lines
-string = "" #keeps track of previous sentence(s) used to make new sentences
-phrases.each do |phrase|
-    string = phrase + " " + string #creates new line
-    nursery_rhyme += "This is the " + string + "\n" #adds to the collection of other lines
-    # new_phrase = nursery_rhyme + phrase 
-    # nursery_rhyme += new_phrase
-    # puts nursery_rhyme
-    # puts "-------"
-end
-    puts nursery_rhyme
+nursery_rhyme = Rhyme.new(phrases)
+puts nursery_rhyme.createRhyme
