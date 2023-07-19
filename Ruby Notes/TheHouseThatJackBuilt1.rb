@@ -10,10 +10,6 @@ class Rhyme
         phrases.each do |phrase|
             string = phrase + " " + string #creates new line
             nursery_rhyme += "This is the " + string + "\n" #adds to the collection of other lines
-    # new_phrase = nursery_rhyme + phrase 
-    # nursery_rhyme += new_phrase
-    # puts nursery_rhyme
-    # puts "-------"
     end
     nursery_rhyme
     end
