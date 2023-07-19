@@ -36,4 +36,3 @@ phrases.push("horse and the hound and the horn that belonged to")
 
 nursery_rhyme = Rhyme.new(phrases)
 puts nursery_rhyme.createRhyme
-

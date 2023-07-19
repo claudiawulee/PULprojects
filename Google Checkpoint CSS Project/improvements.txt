@@ -1,0 +1,4 @@
+List of possible ways to improve this project
+⚪ Add behavior to front-end (JavaScript?)
+⚪ fix grid icon and profile picture alignment with header buttons
+⚪ text size/width of general text looks off
