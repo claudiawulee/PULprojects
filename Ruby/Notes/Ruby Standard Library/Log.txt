@@ -1,0 +1,5 @@
+# Logfile created on 2023-07-23 23:12:22 -0400 by logger.rb/v1.5.0
+I, [2023-07-23T23:12:22.843742 #23351]  INFO -- : Info message
+D, [2023-07-23T23:12:22.843763 #23351] DEBUG -- : Debug Message
+W, [2023-07-23T23:12:22.843774 #23351]  WARN -- : Warning Message
+F, [2023-07-23T23:12:22.843781 #23351] FATAL -- : Fatal Message
