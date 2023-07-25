@@ -8,7 +8,7 @@ end
 #"Local" refers to the fact that it's not out on the Internet somewhere, it's this same machine. And "host" is another name for "server".
 #signals that you want to send a request from your computer back to that same computer
 
-
+#http://localhost:4567/carrot
 get "/carrot" do 
     "Here's a crunchy carrot"
 end
