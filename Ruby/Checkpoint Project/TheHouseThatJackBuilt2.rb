@@ -1,3 +1,4 @@
+#MVP - latest updates on Jack.rb
 
 class Jack
     attr_reader :phrases

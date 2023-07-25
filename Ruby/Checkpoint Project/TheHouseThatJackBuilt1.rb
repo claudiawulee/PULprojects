@@ -1,3 +1,4 @@
+#MVP - latest updates on Jack.rb
 class Rhyme
     attr_reader :phrases
     def initialize()
