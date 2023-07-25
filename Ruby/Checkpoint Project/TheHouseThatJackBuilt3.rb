@@ -1,7 +1,19 @@
 class Jack
     attr_reader :phrases
-    def initialize(phrases)
-        @phrases = phrases
+    def initialize()
+        @phrases = []
+        phrases.push("house that Jack built")
+        phrases.push("malt that lay in")
+        phrases.push("rat that ate")
+        phrases.push("cat that killed")
+        phrases.push("dog that worried")
+        phrases.push("cow with the crumpled horn that tossed")
+        phrases.push("maiden all forlorn that milked")
+        phrases.push("man all tattered and torn that kissed")
+        phrases.push("priest all shaven and shorn that married")
+        phrases.push("rooster that crowed in the morn that woke")
+        phrases.push("farmer sowing his corn that kept")
+        phrases.push("horse and the hound and the horn that belonged to")
     end
     def randomizeRhyme
         #switching items in the array approach
@@ -28,19 +40,7 @@ class Jack
     end
 end
 
-phrases = []
-phrases.push("the house that Jack built")
-phrases.push("the malt that lay in")
-phrases.push("the rat that ate")
-phrases.push("the cat that killed")
-phrases.push("the dog that worried")
-phrases.push("the cow with the crumpled horn that tossed")
-phrases.push("the maiden all forlorn that milked")
-phrases.push("the man all tattered and torn that kissed")
-phrases.push("the priest all shaven and shorn that married")
-phrases.push("the rooster that crowed in the morn that woke")
-phrases.push("the farmer sowing his corn that kept")
-phrases.push("the horse and the hound and the horn that belonged to")
 
-jack = Jack.new(phrases)
+
+jack = Jack.new()
 puts jack.printRhyme
