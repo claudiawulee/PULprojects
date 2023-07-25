@@ -1,5 +1,3 @@
-#MVP - latest updates on Jack.rb
-
 class Jack
     attr_reader :phrases
     def initialize()
@@ -17,32 +15,62 @@ class Jack
         phrases.push("farmer sowing his corn that kept")
         phrases.push("horse and the hound and the horn that belonged to")
     end
-    def randomizeRhyme
+
+    #checkpoint part 1
+    def originalRhyme()
+        printRhyme()
+    end
+
+    #checkpoint part 2
+    def randomRhyme()
+        randomizeRhyme(0)
+        printRhyme()
+    end
+
+    #checkpoint part 3
+    def originalEnding()
+        randomizeRhyme(1)
+        printRhyme()
+    end
+
+    def randomizeRhyme(startIndex)
         #switching items in the array approach
-        puts "Enter the number of times you would like to randomize the array: "
+        print "Enter the number of times you would like to randomize the array: "
         num = gets.chomp.to_i
         num.times do 
-            index1 = Random.rand(1...phrases.length())
-            index2 = Random.rand(1...phrases.length())
+            index1 = Random.rand(startIndex...phrases.length())
+            index2 = Random.rand(startIndex...phrases.length())
             temp = phrases[index1]
             phrases[index1] = phrases[index2]
             phrases[index2] = temp
         end
     end
+    
     def printRhyme
-        randomizeRhyme
         phrases[0] << "." #appends a period to the first sentence (so every sentence has a period)
         nursery_rhyme = "" #final string containing all the lines
         string = "" #keeps track of previous sentence(s) used to make new sentences
         phrases.each do |phrase|
+            phrase = "the " + phrase
             string = phrase + " " + string #creates new line
             nursery_rhyme += "This is " + string + "\n" #adds to the collection of other lines
         end
         nursery_rhyme
     end
+    
 end
 
 
 
-jack = Jack.new()
-puts jack.printRhyme
+# checkpt1 = Jack.new()
+# puts checkpt1.originalRhyme
+
+# checkpt2 = Jack.new()
+# puts checkpt2.randomRhyme()
+
+# checkpt3 = Jack.new()
+# puts checkpt3.originalEnding()
+
+
+
+
