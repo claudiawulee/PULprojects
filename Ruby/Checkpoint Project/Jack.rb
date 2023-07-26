@@ -18,39 +18,39 @@ class Jack
 
     #checkpoint part 1
     def originalRhyme()
-        printRhyme()
+        printRhyme(phrases)
     end
 
     #checkpoint part 2
-    def randomRhyme()
-        randomizeRhyme(0)
-        printRhyme()
+    def randomRhyme(num)
+        arr = randomizeRhyme(0,num)
+        printRhyme(arr)
     end
 
     #checkpoint part 3
-    def originalEnding()
-        randomizeRhyme(1)
-        printRhyme()
+    def originalEnding(num)
+        arr = randomizeRhyme(1,num)
+        printRhyme(arr)
     end
 
-    def randomizeRhyme(startIndex)
+    def randomizeRhyme(startIndex, num)
         #switching items in the array approach
-        print "Enter the number of times you would like to randomize the array: "
-        num = gets.chomp.to_i
+        copy_arr = phrases.clone
         num.times do 
-            index1 = Random.rand(startIndex...phrases.length())
-            index2 = Random.rand(startIndex...phrases.length())
-            temp = phrases[index1]
-            phrases[index1] = phrases[index2]
-            phrases[index2] = temp
+            index1 = Random.rand(startIndex...copy_arr.length())
+            index2 = Random.rand(startIndex...copy_arr.length())
+            temp = copy_arr[index1]
+            copy_arr[index1] = copy_arr[index2]
+            copy_arr[index2] = temp
         end
+        copy_arr
     end
     
-    def printRhyme
-        phrases[0] << "." #appends a period to the first sentence (so every sentence has a period)
+    def printRhyme(arr)
+        arr[0] << "." #appends a period to the first sentence (so every sentence has a period)
         nursery_rhyme = "" #final string containing all the lines
         string = "" #keeps track of previous sentence(s) used to make new sentences
-        phrases.each do |phrase|
+        arr.each do |phrase|
             phrase = "the " + phrase
             string = phrase + " " + string #creates new line
             nursery_rhyme += "This is " + string + "\n" #adds to the collection of other lines
@@ -62,14 +62,17 @@ end
 
 
 
+# puts "--------------------------"
 # checkpt1 = Jack.new()
 # puts checkpt1.originalRhyme
 
 # checkpt2 = Jack.new()
-# puts checkpt2.randomRhyme()
+# puts checkpt2.randomRhyme(3)
 
 # checkpt3 = Jack.new()
-# puts checkpt3.originalEnding()
+# puts checkpt3.originalEnding(3)
+
+
 
 
 
