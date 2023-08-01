@@ -63,13 +63,13 @@ end
 
 
 # puts "--------------------------"
-# checkpt1 = jack.new()
+# checkpt1 = Jack.new()
 # puts checkpt1.original_rhyme
 
-# checkpt2 = jack.new()
+# checkpt2 = Jack.new()
 # puts checkpt2.random_rhyme(3)
 
-# checkpt3 = jack.new()
+# checkpt3 = Jack.new()
 # puts checkpt3.original_ending(3)
 
 
