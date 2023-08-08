@@ -1,0 +1,39 @@
+page = Page.new
+page.title = "About this Blog:\
+"
+page.title = "About this Blog"
+page.body = "Rail notes"
+page.slug = "about"
+page2 = Page.new
+page2.title = "Resume"
+page2.body = "test"
+page2.slug = "resume"
+page.save
+page2.save
+Page.all
+bin/rails s
+exit
+Pages.all
+exit
+params = ActionController::Parameters.new(\
+  stuff: "%$#@".\
+  page: {title: "title", body: "body", slug: "slug", is_admin: "true"}\
+)
+params = ActionController::Parameters.new(\
+  stuff: "%$#@".\
+page: {title: "title", body: "body", slug: "slug", is_admin: "true"})
+params = ActionController::Parameters.new(\
+  stuff: "%$#@",\
+page: {title: "title", body: "body", slug: "slug", is_admin: "true"})
+Page.new(params)
+exit
+params.require(:page)
+params = ActionController::Parameters.new(\
+  stuff: "%$#@",\
+page: {title: "title", body: "body", slug: "slug", is_admin: "true"})
+params.require(page)
+params.require(:page)
+params.require(:page).permit(:title)
+Page.new(params.require(:page).permit(:title))
+Page.new(params.require(:page).permit(:title,:body,:slug))
+exit
