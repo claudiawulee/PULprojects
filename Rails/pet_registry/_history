@@ -1,0 +1,4 @@
+lucky = Pet.new(name: "Lucky", age: 1)
+lucky.save
+lucky
+exit

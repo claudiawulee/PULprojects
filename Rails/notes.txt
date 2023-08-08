@@ -1,0 +1,41 @@
+rails new <name>
+bin/rails server
+bin/rails generate scaffold <name of server> <attribute>:<data type>
+for ActiveRecord::PendingMigrationError: bin/rails db:migrate
+
+controller loads web page using Post.all, handles browser request
+controller methods are called actions
+
+Model retrives and stores data
+
+bin/rails console #allows you to just use the terminal
+
+Post.all
+Post.last
+Post.find(<id>)
+
+post = Post.new
+default values = nil
+post.title = "HI"
+post.save
+
+Post.all #also assigns id
+
+post.destroy
+
+bin.rails generate migration <name> <col name>:<data type>
+Add<col name>To<model name plural>
+
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+def pet_params
+      params.require(:pet).permit(:name, :birthdate)
+    end
+
+bin/rails routes - shows all possible paths
+
+
+bin/rails generate controller Pages
+bin/rails destroy controller Pages
