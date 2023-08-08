@@ -2,3 +2,70 @@ lucky = Pet.new(name: "Lucky", age: 1)
 lucky.save
 lucky
 exit
+pet = Pet.last
+pet
+pet.activity_id
+rails g mirgration RemovePet_idFromPet_activities pet_id:integer
+rails g migration RemovePet_idFromPet_activities pet_id:integer
+rails g migration RemovePet_idFromPet_activities pet_id:Integer
+RemovePet_IdFromPet_Activities pet_id:integer
+RemovePet_IdFromPet_Activities pet_id:Integer
+RemovePetIdFromPetActivities pet_id:Integer
+exit
+act = pet_activities.new
+act = pet_activity.new
+act = PetActivity
+act = PetActivity.new
+act
+exit
+act = PetActivity.new
+act
+exit
+pet = Pet.last
+pet.pet_activity
+pet.pet_id
+exit
+pet = Pet.last
+pet.
+exit
+pet = Pet.last
+pet.pet_id
+pet.pet_id_ids
+pets = pet.pet_ids
+pets = pet.pet_ids.build
+pets = pet.pet_id.build
+pets = pet.pet_id.build
+exit
+pets = pet.pet_activities.build
+pet = Pet.last
+polar = pet.pet_activities.build
+pet.pet_activities
+exit
+pet.pet_activities
+polar = pet.pet_activities.build
+pet = Pet.last
+polar = pet.pet_activities.build
+polar.activity_id = 1
+polar.save
+pp polar
+exit
+polar_pet_id
+polar = Pet.last
+polar
+polar.pet_activities.build
+polar.pet_activities.activity_id = 1
+polar.activity_id = 1
+polar
+polar.pet_activities
+polar.pet_activity_ids=2
+polar.pet_activity_ids=1
+polar
+polar.pet_activities
+lucky = Pet.new
+lucky.id
+lucky.id = 17
+lucky.pet_activities.build
+lucky.pet_activities.id
+lucky.pet_activities.ids
+lucky.pet_activities.ids = 2
+exit

@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_08_034525) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_08_174835) do
   create_table "activities", force: :cascade do |t|
     t.string "action"
     t.boolean "high_energy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pet_activities", force: :cascade do |t|
+    t.integer "activity_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "pet_id"
+    t.index ["pet_id"], name: "index_pet_activities_on_pet_id"
   end
 
   create_table "pets", force: :cascade do |t|
