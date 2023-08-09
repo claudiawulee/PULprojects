@@ -39,3 +39,7 @@ bin/rails routes - shows all possible paths
 
 bin/rails generate controller Pages
 bin/rails destroy controller Pages
+
+# to see column names in rails CONSOLE
+ActiveRecord::Base.connection.tables
+ActiveRecord::Base.connection.columns('<COL_NAME>').map(&:name)
