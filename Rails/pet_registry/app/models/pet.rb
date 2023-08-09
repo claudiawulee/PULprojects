@@ -5,6 +5,6 @@ class Pet < ApplicationRecord
     validates :color, presence: true
     validates :breed, presence: true
 
-    has_many :pet_activities
+    has_and_belongs_to_many :activities
 
 end

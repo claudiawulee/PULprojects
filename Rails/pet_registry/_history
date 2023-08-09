@@ -69,3 +69,27 @@ lucky.pet_activities.id
 lucky.pet_activities.ids
 lucky.pet_activities.ids = 2
 exit
+ActiveRecord::Base.connection.tables
+ActiveRecord::Base.connection.columns('<COL_NAME>').map(&:name)
+ActiveRecord::Base.connection.columns('<pet_activities>').map(&:name)
+ActiveRecord::Base.connection.columns('pet_activities').map(&:name)
+exit
+ActiveRecord::Base.connection.tables
+ActiveRecord::Base.connection.columns('pet_activities').map(&:name)
+exit
+exit
+polar
+polar = Pet.last
+polar.pet_activity_ids=12
+polar
+polar.pet_activities
+polar.pet_activities.pet_id
+polar.activities
+polar.action
+polar.activities.create(action: "fetch")
+polar.activities(high_energy: true)
+polar.activities(high_energy: true)
+polar.pet_activities
+polar.activities.update(action: "run", high_energy: true)
+polar.activities.set(action: "jump", high_energy: true)
+exit

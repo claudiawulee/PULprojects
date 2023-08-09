@@ -5,7 +5,12 @@ class PetsController < ApplicationController
   end
 
   def show
-    @pet = Pet.find(params[:id])
+    set_page
+  end
+
+  def card
+    index
+    render :card
   end
 
   def new
@@ -22,12 +27,11 @@ class PetsController < ApplicationController
   end
 
   def edit
-    @pet = Pet.find(params[:id])
+    set_page
   end
 
   def update
-    @pet = Pet.find(params[:id])
-
+    set_page
     if @pet.update(pet_params)
       redirect_to @pet
     else
@@ -36,15 +40,17 @@ class PetsController < ApplicationController
   end
 
   def destroy
-    @pet = Pet.find(params[:id])
+    set_page
     @pet.destroy
-
     redirect_to root_path, status: :see_other
   end
 
   private
   def pet_params
       params.require(:pet).permit(:name, :age, :animal, :color, :breed)
+  end
+  def set_page
+    @pet = Pet.find(params[:id])
   end
 
 end
