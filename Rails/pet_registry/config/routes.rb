@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get "/pets/new", to: "pets#new", as: 'new_pet'
   get "/pets/card", to: "pets#card", as: 'card'
   get "/pets/:id", to: "pets#show", as: 'page'
+  delete "/pets/:id", to: "pets#destroy"
   resources :pets
   # Defines the root path route ("/")
   # root "articles#index"
-  # delete "/pets/:id", to: "pets#destroy"
 end
