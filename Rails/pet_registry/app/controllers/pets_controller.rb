@@ -51,6 +51,7 @@ class PetsController < ApplicationController
   end
   def set_page
     @pet = Pet.find(params[:id])
+    # @activities = Activity.find(1)
   end
 
 end

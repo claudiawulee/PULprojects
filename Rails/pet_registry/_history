@@ -93,3 +93,7 @@ polar.pet_activities
 polar.activities.update(action: "run", high_energy: true)
 polar.activities.set(action: "jump", high_energy: true)
 exit
+dog = Pet.create name: 'Ted'
+act = Activity.create action: 'run'
+dog.activities << act
+exit
