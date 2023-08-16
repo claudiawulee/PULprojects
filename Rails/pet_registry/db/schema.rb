@@ -46,12 +46,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_09_223652) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pet_activities", force: :cascade do |t|
+  create_table "activities_pets", force: :cascade do |t|
     t.integer "activity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "pet_id"
-    t.index ["pet_id"], name: "index_pet_activities_on_pet_id"
+    t.index ["pet_id"], name: "index_activities_pets_on_pet_id"
   end
 
   create_table "pets", force: :cascade do |t|

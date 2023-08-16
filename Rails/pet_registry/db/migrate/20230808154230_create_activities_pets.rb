@@ -1,6 +1,6 @@
-class CreatePetActivities < ActiveRecord::Migration[7.0]
+class CreateActivitiesPets < ActiveRecord::Migration[7.0]
   def change
-    create_table :pet_activities do |t|
+    create_table :activities_pets do |t|
       t.integer :pet_id
       t.integer :activity_id
 
