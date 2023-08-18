@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_09_223652) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_14_224252) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -46,12 +46,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_09_223652) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pet_activities", force: :cascade do |t|
+  create_table "activities_pets", force: :cascade do |t|
     t.integer "activity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "pet_id"
-    t.index ["pet_id"], name: "index_pet_activities_on_pet_id"
+    t.index ["pet_id"], name: "index_activities_pets_on_pet_id"
   end
 
   create_table "pets", force: :cascade do |t|
