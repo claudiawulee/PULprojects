@@ -3,52 +3,21 @@
 </head>
 <body>
 <div class = "px-5">
-<%= bootstrap_form_for(@pet, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-8") do |p|%>
-
-  <div>
-    <%= p.text_field :name %>
-    <% pet.errors.full_messages_for(:name).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
+  <div class = "container">
+    <div class = "row">
+      <div class = "col">
+        <%= render "pet_info", pet: @pet%>
+      </div>
+      <div class = "col">
+        <%= render "activity_info", pet: @pet%>
+      </div>
+    </div>
   </div>
-
-   <div>
-    <%= p.text_area :animal %>
-    <% pet.errors.full_messages_for(:animal).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= p.text_area :age %>
-    <% pet.errors.full_messages_for(:age).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
-  </div>
-
-   <div>
-    <%= p.text_area :color %>
-    <% pet.errors.full_messages_for(:color).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
-  </div>
-
-   <div>
-    <%= p.text_area :breed %>
-    <% pet.errors.full_messages_for(:breed).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-
-  </div>
-    <%=p.file_field :picture%>
-  <div>
-    <br>
-    <%= p.submit %>
-  </div>
-<% end %>
 </div>
+
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>

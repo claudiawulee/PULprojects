@@ -1,0 +1,47 @@
+<%= bootstrap_form_for(@pet, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-8") do |p|%>
+  
+  <div>
+    <%= p.text_field :name %>
+    <% pet.errors.full_messages_for(:name).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= p.text_area :animal %>
+    <% pet.errors.full_messages_for(:animal).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= p.text_area :age %>
+    <% pet.errors.full_messages_for(:age).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= p.text_area :color %>
+    <% pet.errors.full_messages_for(:color).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= p.text_area :breed %>
+    <% pet.errors.full_messages_for(:breed).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%=p.file_field :picture%>
+  </div>
+
+  <div>
+    <br>
+    <%= p.submit %>
+  </div>
+
+<% end %>
