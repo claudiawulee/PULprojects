@@ -1,0 +1,23 @@
+<h2>General Info</h2>
+<%= bootstrap_form_for(@activity, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-8") do |a|%>
+  
+  <div>
+    <%= a.text_field :action %>
+    <% activity.errors.full_messages_for(:action).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+  </div>
+
+   <div>
+    <%= a.text_area :high_energy %>
+    <% activity.errors.full_messages_for(:high_energy).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+  </div>
+  
+  <div>
+    <br>
+    <%= a.submit %>
+  </div>
+
+<% end %>

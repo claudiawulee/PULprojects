@@ -8,6 +8,7 @@ let message = "hello \
 this continues on the next line \
  and JS will understand.";
 const num = 6;
+// let message = "string";
 
 console.log(message);
 

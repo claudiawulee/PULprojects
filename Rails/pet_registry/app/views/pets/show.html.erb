@@ -4,6 +4,10 @@
 </head>
 
 <body>
+  <script>
+    console.log("hi");
+
+  </script>
 <%= render "nav"%>
 
 
@@ -17,19 +21,19 @@
 
     <div class = "container">
     <div class = "row">
-      <div class = "col">
+      <div class = "col"> 
         <h2>Description</h2>
         <p>Animal: <%= @pet.animal %></p>
         <p>Breed: <%= @pet.breed %></p>
         <p>Age: <%= @pet.age %> years old</p>
         <p>Color: <%= @pet.color %></p>
-      </div>
-      <div class = "col">
-        <h2>List of Activities</h2>
-        <%@pet.activities.each do |a|%>
-          <p><%=a.action%></p>
-        <%end%>
-      </div>
+      </div> 
+      <div class = "col"> 
+        <h2>List of Activities</h2> 
+         <%@pet.activities.each do |a|%> 
+          <%=a.action%>
+         <%end%> 
+       </div>  
     </div>
   </div>
 </div>
