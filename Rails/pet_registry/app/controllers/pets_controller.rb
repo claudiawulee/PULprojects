@@ -6,6 +6,7 @@ class PetsController < ApplicationController
 
   def show
     set_page
+    # @activity = @pet.activities.build
   end
 
   def card
@@ -32,6 +33,11 @@ class PetsController < ApplicationController
 
   def update
     set_page
+    byebug
+    #figure out how to add activities to each pet
+    # @pet.activities << ID
+    #check which activities are already added
+    #removing activities (unselecting)
     if @pet.update(pet_params)
       redirect_to @pet
     else
@@ -47,7 +53,10 @@ class PetsController < ApplicationController
 
   private
   def pet_params
-      params.require(:pet).permit(:name, :age, :animal, :color, :breed, :picture)
+      params.require(:pet).permit(:name, :age, :animal, :color, :breed, :picture, :pet_activities)
+  end
+  def activities_params
+    return params[:pet_activities]
   end
   def set_page
     @pet = Pet.find(params[:id])
