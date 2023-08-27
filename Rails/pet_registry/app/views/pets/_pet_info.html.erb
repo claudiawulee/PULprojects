@@ -40,12 +40,10 @@
     <%=p.file_field :picture%>
   </div>
 
-<%# fix %>
-  <select multiple id="pet_activities" name="pet_activities[]">
-    <% Activity.all.each do |activity| %>
-            <option id = <%=activity.id%>><%= activity.action %></option>
-    <% end %>
-</select>
+<%# trying to implement checkboxes for activities of a pet %>
+<%= p.collection_check_boxes :pet, :activity_ids, Activity.all, :id, :return_action%>
+
+
 
   <div>
     <br>

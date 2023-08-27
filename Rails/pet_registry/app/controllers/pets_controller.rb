@@ -51,6 +51,7 @@ class PetsController < ApplicationController
     redirect_to root_path, status: :see_other
   end
 
+
   private
   def pet_params
       params.require(:pet).permit(:name, :age, :animal, :color, :breed, :picture, :pet_activities)
