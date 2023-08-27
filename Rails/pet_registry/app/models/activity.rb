@@ -4,4 +4,8 @@ class Activity < ApplicationRecord
 
     has_and_belongs_to_many :pets
 
+    def return_action
+        "#{action}"
+    end
+
 end
