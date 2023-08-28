@@ -57,7 +57,7 @@ class ActivitiesController < ApplicationController
       def destroy
         set_page
         @activity.destroy
-        redirect_to root, status: :see_other
+        redirect_to activities_card_path, status: :see_other
       end
 
       private
