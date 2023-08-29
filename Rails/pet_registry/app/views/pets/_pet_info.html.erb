@@ -41,8 +41,8 @@
   </div>
 
 <%# trying to implement checkboxes for activities of a pet %>
-<%= p.collection_check_boxes :pet, :activity_ids, Activity.all, :id, :return_action%>
 
+<%= p.collection_check_boxes :activity_ids, Activity.all, :id, :return_action, label: "Activities"%>
 
 
   <div>

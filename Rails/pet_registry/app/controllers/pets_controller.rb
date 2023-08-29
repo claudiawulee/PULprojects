@@ -33,7 +33,7 @@ class PetsController < ApplicationController
 
   def update
     set_page
-    byebug
+    
     #figure out how to add activities to each pet
     # @pet.activities << ID
     #check which activities are already added
