@@ -24,7 +24,13 @@
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title"><a href =<%=(url_for(activity))%>><%=activity.action%></a></h5>
-            <p class="card-text">High Energy?: <%=activity.high_energy%></p>
+            <p class="card-text">High Energy?: 
+              <%if activity.high_energy %>
+                  Yes
+              <%else%>
+                  No
+              <%end%>
+            </p>
           </div>
         </div>
       </div>
