@@ -5,9 +5,19 @@
 
 <body> 
 <%= render "nav"%>
-  <h2>List of Activities</h2>
-  <%=@activity.action%>
-  <%=@activity.high_energy%>
+<div class="text-center">
+    <div class="mx-auto p-2">
+      <h2><%=@activity.action%></h2>
+    </div>
+    <p>High Energy?: 
+      <%if @activity.high_energy %>
+        Yes
+      <%else%>
+        No
+      <%end %>
+      </p>
+  </div>
+  
       
 <div class = "fixed-bottom">
   <div class = "container">

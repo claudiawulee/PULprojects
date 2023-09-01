@@ -8,4 +8,6 @@ class Pet < ApplicationRecord
     has_and_belongs_to_many :activities
     has_one_attached :picture
 
+    before_create { |pet| pet.name = pet.name.capitalize }
+
 end
